@@ -1,5 +1,6 @@
 package jwc.springfeigntest.client;
 
+import jwc.springfeigntest.FeignConfiguration;
 import jwc.springfeigntest.domain.Greeting;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 // according to
 // https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html#spring-cloud-feign-inheritance,
 // so we copy the interface instead of inheriting it.
-@FeignClient(name = "greeting", url = "http://localhost:8080")
+@FeignClient(name = "greeting", url = "http://localhost:8080",
+        configuration = FeignConfiguration.class)
 public interface GreetingClient {
 
     @RequestMapping("/greeting")

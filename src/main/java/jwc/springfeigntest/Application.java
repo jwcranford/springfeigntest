@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients(defaultConfiguration = FeignConfiguration.class)
+@EnableFeignClients
 public class Application implements CommandLineRunner {
 
     @Autowired

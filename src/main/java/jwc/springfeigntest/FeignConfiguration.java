@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * configuration, as described at
  * https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html#spring-cloud-feign-overriding-defaults
  */
-@Configuration
 public class FeignConfiguration {
 
     @Bean
